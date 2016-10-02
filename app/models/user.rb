@@ -3,8 +3,12 @@ class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
-  validates :username, presence: true, length: { maximum: 50 }
-  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  validates :username, presence: true,
+                       length: { maximum: 50 },
+                       uniqueness: true
+  validates :password, presence: true,
+                       length: { minimum: 6 },
+                       allow_nil: true
 
   class << self
     # Return the hash digest of the given string

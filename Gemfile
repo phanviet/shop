@@ -52,6 +52,7 @@ group :test do
   gem 'rails-controller-testing', '~> 1.0.1'
   gem 'guard', '~> 2.14.0'
   gem 'guard-minitest', '~> 2.4.6'
+  gem 'mocha', '~> 1.1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
