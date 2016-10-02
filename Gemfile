@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.2.1'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -23,10 +23,13 @@ gem 'turbolinks', '~> 5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.11'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'faker', '1.6.3'
+
 
 group :development, :test do
   gem 'sqlite3'
@@ -45,10 +48,10 @@ end
 
 group :test do
   gem 'simplecov', require: false
-  gem 'minitest-reporters'
-  gem 'rails-controller-testing'
-  gem 'guard'
-  gem 'guard-minitest'
+  gem 'minitest-reporters', '~> 1.1.11'
+  gem 'rails-controller-testing', '~> 1.0.1'
+  gem 'guard', '~> 2.14.0'
+  gem 'guard-minitest', '~> 2.4.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

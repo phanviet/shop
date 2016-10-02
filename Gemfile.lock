@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (7.1.2)
+    bcrypt (3.1.11)
     builder (3.2.2)
     byebug (9.0.6)
     coderay (1.1.1)
@@ -48,6 +49,8 @@ GEM
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.6.3)
+      i18n (~> 0.5)
     ffi (1.9.14)
     formatador (0.2.5)
     globalid (0.3.7)
@@ -188,15 +191,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.11)
   byebug
-  guard
-  guard-minitest
-  jquery-rails
+  faker (= 1.6.3)
+  guard (~> 2.14.0)
+  guard-minitest (~> 2.4.6)
+  jquery-rails (~> 4.2.1)
   listen (~> 3.0.5)
-  minitest-reporters
+  minitest-reporters (~> 1.1.11)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
-  rails-controller-testing
+  rails-controller-testing (~> 1.0.1)
   sass-rails (~> 5.0)
   simplecov
   spring
