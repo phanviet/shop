@@ -1,2 +1,40 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="container login-component">
+  <div class="row login-component__main">
+    <div class="panel-heading">
+      <div class="panel-title text-center">
+        <h1 class="title">Company Name</h1>
+        <hr />
+      </div>
+    </div>
+    <div class="login-component__form">
+
+      <!-- LOGIN FORM -->
+      <%= form_for @user_as_login, url: login_action_path, html: { class: 'form-horizontal login-form' } do |f| %>
+        <div class="form-group login-form__group">
+          <%= f.label :username, t('.label.username'), class: 'control-label login-form__label cols-sm-2' %>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+              <%= f.text_field :username, class: 'form-control login-form__input', placeholder: t('.placeholder.username') %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group login-form__group">
+          <%= f.label :username, t('.label.password'), class: 'control-label login-form__label cols-sm-2' %>
+          <div class="cols-sm-10">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+              <%= f.password_field :password, class: 'form-control login-form__input', placeholder: t('.placeholder.password') %>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group login-form__group">
+          <%= f.submit t('.submit'), class: 'btn btn-primary btn-block login-form__submit' %>
+        </div>
+      <% end %>
+      <!-- END FORM -->
+    </div>
+  </div>
+</div>

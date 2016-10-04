@@ -1,6 +1,7 @@
 class User::AsLogin
   include ActiveModel::AttributeMethods
   include ActiveModel::Validations
+  include ActiveModel::Conversion
   extend ActiveModel::Translation
 
   attr_accessor :username, :password
@@ -10,7 +11,5 @@ class User::AsLogin
 
   def save
     return unless self.valid?
-
-    user = User.
   end
 end
