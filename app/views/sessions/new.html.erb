@@ -10,6 +10,8 @@
 
       <!-- LOGIN FORM -->
       <%= form_for @user_as_login, url: login_action_path, html: { class: 'form-horizontal login-form' } do |f| %>
+        <%= render 'shared/form_errors', obj: @user_as_login %>
+
         <div class="form-group login-form__group">
           <%= f.label :username, t('.label.username'), class: 'control-label login-form__label cols-sm-2' %>
           <div class="cols-sm-10">

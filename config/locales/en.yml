@@ -1,4 +1,8 @@
 en:
+  login:
+    admin:
+      success: Welcome to dashboard
+  credential_fail: Invalid Username or Password
   sessions:
     new:
       placeholder:

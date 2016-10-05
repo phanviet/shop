@@ -22,6 +22,9 @@ guard :minitest, spring: true, all_on_start: false do
   watch(%r{^app/models/(.*?)\.rb$}) do |matches|
     "test/models/#{matches[1]}_test.rb"
   end
+  watch(%r{^app/services/(.*?)\.rb$}) do |matches|
+    "test/services/#{matches[1]}_test.rb"
+  end
   watch(%r{^app/controllers/(.*?)_controller\.rb$}) do |matches|
     resource_tests(matches[1])
   end
