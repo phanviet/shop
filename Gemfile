@@ -56,7 +56,7 @@ group :test do
   gem 'guard', '~> 2.14.0'
   gem 'guard-minitest', '~> 2.4.6'
   gem 'mocha', '~> 1.1.0'
-  gem 'codeclimate-test-reporter', "1.0.0.pre.rc2", require: false
+  gem 'codeclimate-test-reporter', "1.0.0.pre.rc2"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

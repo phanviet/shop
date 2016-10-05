@@ -4,11 +4,9 @@ require 'rails/test_help'
 require 'mocha/mini_test'
 require 'minitest/reporters'
 require 'simplecov'
-require "codeclimate-test-reporter"
 
 SimpleCov.start
 MiniTest::Reporters.use!
-CodeClimate::TestReporter.start
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
