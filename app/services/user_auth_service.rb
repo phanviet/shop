@@ -7,10 +7,7 @@ class UserAuthService
 
   def authenticate
     user = User.find_by(username: @username)
-    if user && user.authenticate(@password)
-      user
-    else
-      nil
-    end
+    return user if user && user.authenticate(@password)
+    nil
   end
 end
